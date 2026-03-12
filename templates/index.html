@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>AI Microalgal Growth Simulator</title>
+
+<link rel="stylesheet" href="/static/style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<h1>🌱 AI-Driven Microalgal Biomass Simulator</h1>
+
+<div class="container">
+
+<!-- INPUT PANEL -->
+
+<div class="controls">
+
+<h2>Cultivation Parameters</h2>
+
+<div class="input-group">
+<label>Light Intensity (µmol m⁻² s⁻¹)</label>
+<input type="number" id="Light" value="200">
+</div>
+
+<div class="input-group">
+<label>Nitrate (mg/L)</label>
+<input type="number" id="Nitrate" value="30">
+</div>
+
+<div class="input-group">
+<label>Iron (mg/L)</label>
+<input type="number" id="Iron" value="2">
+</div>
+
+<div class="input-group">
+<label>Phosphate (mg/L)</label>
+<input type="number" id="Phosphate" value="10">
+</div>
+
+<div class="input-group">
+<label>Temperature (°C)</label>
+<input type="number" id="Temperature" value="25">
+</div>
+
+<div class="input-group">
+<label>pH</label>
+<input type="number" step="0.1" id="pH" value="7">
+</div>
+
+<div class="input-group">
+<label>CO₂ (%)</label>
+<input type="number" step="0.1" id="CO2" value="2">
+</div>
+
+<button onclick="predict()">Run Simulation</button>
+
+<div class="result-box">
+Predicted Biomass Index
+<div id="result">---</div>
+</div>
+
+</div>
+
+
+<!-- VISUAL BIOREACTOR -->
+
+<div class="visual">
+
+<h2>Bioreactor Simulation</h2>
+
+<div class="bioreactor">
+<canvas id="algaeCanvas"></canvas>
+</div>
+
+</div>
+
+</div>
+
+
+<!-- DASHBOARD SECTION -->
+
+<div class="dashboard">
+
+<!-- CO2 METER -->
+
+<div class="panel">
+
+<h3>CO₂ Absorption Efficiency</h3>
+
+<div class="meter">
+<div id="co2_fill"></div>
+</div>
+
+<div id="co2_value">0%</div>
+
+</div>
+
+
+<!-- GROWTH GRAPH -->
+
+<div class="panel">
+
+<h3>Biomass Growth Curve</h3>
+
+<canvas id="growthChart"></canvas>
+
+</div>
+
+
+<!-- OPTIMIZATION -->
+
+<div class="panel">
+
+<h3>AI Optimization Suggestion</h3>
+
+<div id="suggestions">
+
+Run simulation to see recommendations.
+
+</div>
+
+</div>
+
+</div>
+
+
+<script src="/static/algae.js"></script>
+
+</body>
+</html> 
