@@ -1,4 +1,4 @@
-# 🌱 AI-Driven Microalgal Biomass Prediction & Bioreactor Simulator
+# 🌱 AI-Driven Microalgal Biomass Prediction &  Simulator
 
 This project presents an **AI-based predictive modeling system** for estimating microalgal biomass productivity under different environmental and nutrient conditions. The system integrates **Deep Learning, Flask, and an interactive visualization dashboard** to simulate microalgal growth and carbon sequestration efficiency.
 
